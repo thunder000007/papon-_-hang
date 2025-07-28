@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="bn">
 <head>
@@ -13,6 +12,7 @@
       color: white;
       text-align: center;
       padding-top: 50px;
+      transition: all 0.3s ease-in-out;
     }
 
     h1 {
@@ -73,9 +73,41 @@
       color: #fff;
       font-weight: bold;
     }
+
+    .shake {
+      animation: shake 0.8s infinite;
+    }
+
+    @keyframes shake {
+      0% { transform: translate(1px, 1px) rotate(0deg); }
+      10% { transform: translate(-1px, -2px) rotate(-1deg); }
+      20% { transform: translate(-3px, 0px) rotate(1deg); }
+      30% { transform: translate(3px, 2px) rotate(0deg); }
+      40% { transform: translate(1px, -1px) rotate(1deg); }
+      50% { transform: translate(-1px, 2px) rotate(-1deg); }
+      60% { transform: translate(-3px, 1px) rotate(0deg); }
+      70% { transform: translate(3px, 1px) rotate(-1deg); }
+      80% { transform: translate(-1px, -1px) rotate(1deg); }
+      90% { transform: translate(1px, 2px) rotate(0deg); }
+      100% { transform: translate(1px, -2px) rotate(-1deg); }
+    }
+
+    .aun-text {
+      margin-top: 30px;
+      font-size: 100px;
+      font-weight: bold;
+      color: red;
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 1; }
+      50% { opacity: 0.5; transform: scale(1.05); }
+      100% { opacity: 1; }
+    }
   </style>
 </head>
-<body>
+<body id="main">
 
   <h1>পাপন হ্যাং</h1>
 
@@ -83,17 +115,21 @@
   <div class="status-text ping-high">Ping High</div>
   <div class="status-text network-2g">2g network</div>
 
-  <!-- Image: Upload image and change the src below -->
+  <!-- ছবি -->
   <img src="papon.jpg" alt="Papon Image">
 
   <!-- Boost Button -->
-  <button onclick="showMessage()">Boost server</button>
+  <button onclick="boost()">Boost server</button>
 
   <div id="message"></div>
+  <div id="aun"></div>
 
   <script>
-    function showMessage() {
-      document.getElementById('message').textContent = "This is Papon Hang Server it is not possible to boost ";
+    function boost() {
+      document.getElementById('message').textContent = "This is Papon Hang Server";
+      document.getElementById('aun').textContent = "আহহহহহহহউউউউউউউউউউউউউউউ!!!";
+      document.getElementById('aun').classList.add("aun-text");
+      document.getElementById('main').classList.add("shake");
     }
   </script>
 
