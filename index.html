@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>পাপন হ্যাং</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background: linear-gradient(135deg, violet, pink);
+      color: white;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    h1 {
+      font-size: 100px;
+      margin-bottom: 30px;
+    }
+
+    .status-text {
+      font-size: 100px;
+      margin: 10px 0;
+      font-weight: bold;
+    }
+
+    .server-lag {
+      background: linear-gradient(to right, red, indigo);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .ping-high {
+      background: linear-gradient(to right, yellow, orange);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .network-2g {
+      background: linear-gradient(to right, black, gray);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    img {
+      width: 250px;
+      margin-top: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 12px 20px;
+      background-color: red;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 100px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: darkred;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 100px;
+      color: #fff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>পাপন হ্যাং</h1>
+
+  <div class="status-text server-lag">Server Lag</div>
+  <div class="status-text ping-high">Ping High</div>
+  <div class="status-text network-2g">2g network</div>
+
+  <!-- Image: Upload image and change the src below -->
+  <img src="papon.jpg" alt="Papon Image">
+
+  <!-- Boost Button -->
+  <button onclick="showMessage()">Boost server</button>
+
+  <div id="message"></div>
+
+  <script>
+    function showMessage() {
+      document.getElementById('message').textContent = "This is Papon Hang Server";
+    }
+  </script>
+
+</body>
+</html>
